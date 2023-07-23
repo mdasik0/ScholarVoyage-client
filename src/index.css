@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Nunito', sans-serif;
+}
+.website-title {
+    font-family: 'Poppins', sans-serif;
+}
+.btn-h-w {
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 0px 20px 20px 0px;
+}
