@@ -1,7 +1,7 @@
 import "./Card.css"
 const Card = () => {
   return (
-    <div className="h-[420px] shadow-xl shadow-slate-300 w-full md:w-[350px] bg-slate-200">
+    <div className="h-[420px] shadow-xl shadow-slate-300 w-full hover:scale-105 duration-500 hover:bg-slate-300 md:w-[350px] bg-slate-200">
       {/* image */}
       <div className="h-[220px] rounded">
         <img

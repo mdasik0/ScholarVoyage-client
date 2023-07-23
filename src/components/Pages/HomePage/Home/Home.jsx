@@ -1,4 +1,5 @@
 import FeaturedSection from "../FeaturedSection/FeaturedSection";
+import Gallery from "../Gallery/Gallery";
 import Header from "../Header/Header";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <div>
             <Header></Header>
             <FeaturedSection></FeaturedSection>
+            <Gallery></Gallery>
         </div>
     );
 };
