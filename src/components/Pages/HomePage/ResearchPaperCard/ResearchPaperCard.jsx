@@ -1,3 +1,4 @@
+import {LuExternalLink} from 'react-icons/lu'
 const ResearchPaperCard = () => {
   return (
     <div className="w-[400px] bg-yellow-500 rounded-lg border-2">
@@ -19,7 +20,7 @@ const ResearchPaperCard = () => {
           nisi ipsam cumque unde voluptatum consequuntur quidem, repellat
           voluptates...
         </h3>
-        <button className="btn mt-3 font-bold ">Visit</button>
+        <button className="btn mt-3 font-bold ">Visit <LuExternalLink /></button>
       </div>
     </div>
   );
