@@ -18,7 +18,7 @@ const Gallery = () => {
     <div className="lg:w-[1400px] mx-auto w-full my-20 ">
       <Title
         firstTitle={"Gallery"}
-        secondTitle={"Here is all the college Graduates student group photos"}
+        secondTitle={"Here is all the Memorable College Graduate Group Photos"}
       ></Title>
       <div className="flex my-20 justify-between items-center">
         {/* section info */}
@@ -26,7 +26,7 @@ const Gallery = () => {
           <h1 className="text-5xl font-bold website-title my-3">Find Your Dream</h1>
           <h1 className="text-5xl font-bold website-title my-3">College and</h1>
           <h1 className="text-5xl font-bold website-title my-3"> University.</h1>
-          <p>here is a tilte. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolorem, quaerat iusto cupiditate, odit nobis repellat harum suscipit hic cum saepe optio sit? Rem esse veritatis natus expedita ratione beatae!</p>
+          <p className="my-3 w-3/4">Choose from our wide range of Colleges/Universities and Create your own Dream.</p>
           <button className="button px-3 mt-6">Get Started</button>
         </div>
         {/* section gallery */}

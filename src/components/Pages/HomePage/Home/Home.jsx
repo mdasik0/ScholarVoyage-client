@@ -1,6 +1,7 @@
 import FeaturedSection from "../FeaturedSection/FeaturedSection";
 import Gallery from "../Gallery/Gallery";
 import Header from "../Header/Header";
+import ResearchPaper from "../ResearchPaper/ResearchPaper";
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
             <Header></Header>
             <FeaturedSection></FeaturedSection>
             <Gallery></Gallery>
+            <ResearchPaper></ResearchPaper>
         </div>
     );
 };
