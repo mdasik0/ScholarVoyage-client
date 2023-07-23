@@ -1,7 +1,24 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import { AuthContext } from "../../../Provider/AuthProvider";
+import { useContext } from "react";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+  const { user, logout } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logout()
+      .then(() => {
+        Swal.fire(
+          "LogOut Successful",
+          "You have logged out of your account successfully!",
+          "success"
+        );
+      })
+      .catch((error) => console.error(error));
+  };
+
   const navSection = (
     <>
       <li>
@@ -16,6 +33,26 @@ const Navbar = () => {
       <li>
         <NavLink to="/MyCollege">My College</NavLink>
       </li>
+      
+      {user ? (
+        <>
+          <li className="cursor-pointer" onClick={handleLogout}>
+            Sign out
+          </li>
+          <li>
+            <button>{user.displayName}</button>
+          </li>
+        </>
+      ) : (
+        <>
+          <li>
+            <NavLink to="/signIn">Sign In</NavLink>
+          </li>
+          <li>
+            <NavLink to="/signUp">Sign Up</NavLink>
+          </li>
+        </>
+      )}
     </>
   );
   return (
@@ -47,7 +84,7 @@ const Navbar = () => {
               {navSection}
             </ul>
           </div>
-          <a className="normal-case font-bold text-xl">ScholarVoyage</a>
+          <a className="normal-case poppins font-bold text-xl">ScholarVoyage</a>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="flex gap-6 text-lg font-semibold duration-500">

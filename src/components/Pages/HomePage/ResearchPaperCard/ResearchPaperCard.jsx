@@ -1,7 +1,7 @@
 import { LuExternalLink } from "react-icons/lu";
 const ResearchPaperCard = () => {
   return (
-    <div className="w-[400px] bg-yellow-500 rounded-lg border-2">
+    <div className="w-[400px] bg-slate-200 rounded-lg border-2">
       {/* card image */}
       <div className="p-3">
         <img
@@ -20,7 +20,7 @@ const ResearchPaperCard = () => {
           nisi ipsam cumque unde voluptatum consequuntur quidem, repellat
           voluptates...
         </h3>
-        <button className="btn mt-3 font-bold ">
+        <button className="btn mt-3 hover:bg-blue-950 hover:text-white duration-500 font-bold ">
           Visit <LuExternalLink />
         </button>
       </div>
