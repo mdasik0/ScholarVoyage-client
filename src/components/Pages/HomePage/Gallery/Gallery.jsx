@@ -26,6 +26,7 @@ const Gallery = () => {
           <h1 className="text-5xl font-bold website-title my-3">Find Your Dream</h1>
           <h1 className="text-5xl font-bold website-title my-3">College and</h1>
           <h1 className="text-5xl font-bold website-title my-3"> University.</h1>
+          <p>here is a tilte. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos dolorem, quaerat iusto cupiditate, odit nobis repellat harum suscipit hic cum saepe optio sit? Rem esse veritatis natus expedita ratione beatae!</p>
           <button className="button px-3 mt-6">Get Started</button>
         </div>
         {/* section gallery */}
