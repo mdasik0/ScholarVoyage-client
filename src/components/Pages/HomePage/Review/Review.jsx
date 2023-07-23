@@ -4,10 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import {BiSolidQuoteLeft} from 'react-icons/bi'
+import { BiSolidQuoteLeft } from "react-icons/bi";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Rating } from "@smastrom/react-rating";
-import '@smastrom/react-rating/style.css'
+import "@smastrom/react-rating/style.css";
 
 const Review = () => {
   return (
@@ -43,14 +43,23 @@ const Review = () => {
                   alt=""
                 />
               </div>
-              <h3 className="font-bold website-title mt-3 text-xl">Md Asik</h3>
+              <h3 className="font-bold poppins mt-3 text-xl">Md Asik</h3>
               {/* Rating */}
               <span className="my-3">
                 <Rating style={{ maxWidth: 100 }} value={3} readOnly />
               </span>
-              <span className="text-2xl text-blue-950"><BiSolidQuoteLeft /></span>
-              <h2 className="text-center w-2/3 font-semibold mt-3">&#34;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam accusamus quasi earum molestiae corrupti doloribus similique sapiente, dolore dolorem enim excepturi doloremque deleniti qui voluptates quod at neque. Impedit, quam.&#34;</h2>
-                <p className="mt-4 font-semibold website-title text-slate-500">Narayanganj College</p>
+              <span className="text-2xl text-blue-950">
+                <BiSolidQuoteLeft />
+              </span>
+              <h2 className="text-center w-2/3 font-semibold mt-3">
+                &#34;Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Laboriosam accusamus quasi earum molestiae corrupti doloribus
+                similique sapiente, dolore dolorem enim excepturi doloremque
+                deleniti qui voluptates quod at neque. Impedit, quam.&#34;
+              </h2>
+              <p className="mt-4 font-semibold poppins text-slate-500">
+                Narayanganj College
+              </p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -63,14 +72,23 @@ const Review = () => {
                   alt=""
                 />
               </div>
-              <h3 className="font-bold website-title mt-3 text-xl">Md Asik</h3>
+              <h3 className="font-bold poppins mt-3 text-xl">Md Asik</h3>
               {/* Rating */}
               <span className="my-3">
                 <Rating style={{ maxWidth: 100 }} value={3} readOnly />
               </span>
-              <span className="text-2xl text-blue-950"><BiSolidQuoteLeft /></span>
-              <h2 className="text-center w-2/3 font-semibold mt-3">&#34;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam accusamus quasi earum molestiae corrupti doloribus similique sapiente, dolore dolorem enim excepturi doloremque deleniti qui voluptates quod at neque. Impedit, quam.&#34;</h2>
-                <p className="mt-4 font-semibold website-title text-slate-500">Narayanganj College</p>
+              <span className="text-2xl text-blue-950">
+                <BiSolidQuoteLeft />
+              </span>
+              <h2 className="text-center w-2/3 font-semibold mt-3">
+                &#34;Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Laboriosam accusamus quasi earum molestiae corrupti doloribus
+                similique sapiente, dolore dolorem enim excepturi doloremque
+                deleniti qui voluptates quod at neque. Impedit, quam.&#34;
+              </h2>
+              <p className="mt-4 font-semibold poppins text-slate-500">
+                Narayanganj College
+              </p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -83,14 +101,23 @@ const Review = () => {
                   alt=""
                 />
               </div>
-              <h3 className="font-bold website-title mt-3 text-xl">Md Asik</h3>
+              <h3 className="font-bold poppins mt-3 text-xl">Md Asik</h3>
               {/* Rating */}
               <span className="my-3">
                 <Rating style={{ maxWidth: 100 }} value={3} readOnly />
               </span>
-              <span className="text-2xl text-blue-950"><BiSolidQuoteLeft /></span>
-              <h2 className="text-center w-2/3 font-semibold mt-3">&#34;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam accusamus quasi earum molestiae corrupti doloribus similique sapiente, dolore dolorem enim excepturi doloremque deleniti qui voluptates quod at neque. Impedit, quam.&#34;</h2>
-                <p className="mt-4 font-semibold website-title text-slate-500">Narayanganj College</p>
+              <span className="text-2xl text-blue-950">
+                <BiSolidQuoteLeft />
+              </span>
+              <h2 className="text-center w-2/3 font-semibold mt-3">
+                &#34;Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Laboriosam accusamus quasi earum molestiae corrupti doloribus
+                similique sapiente, dolore dolorem enim excepturi doloremque
+                deleniti qui voluptates quod at neque. Impedit, quam.&#34;
+              </h2>
+              <p className="mt-4 font-semibold poppins text-slate-500">
+                Narayanganj College
+              </p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -103,14 +130,23 @@ const Review = () => {
                   alt=""
                 />
               </div>
-              <h3 className="font-bold website-title mt-3 text-xl">Md Asik</h3>
+              <h3 className="font-bold poppins mt-3 text-xl">Md Asik</h3>
               {/* Rating */}
               <span className="my-3">
                 <Rating style={{ maxWidth: 100 }} value={3} readOnly />
               </span>
-              <span className="text-2xl text-blue-950"><BiSolidQuoteLeft /></span>
-              <h2 className="text-center w-2/3 font-semibold mt-3">&#34;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam accusamus quasi earum molestiae corrupti doloribus similique sapiente, dolore dolorem enim excepturi doloremque deleniti qui voluptates quod at neque. Impedit, quam.&#34;</h2>
-                <p className="mt-4 font-semibold website-title text-slate-500">Narayanganj College</p>
+              <span className="text-2xl text-blue-950">
+                <BiSolidQuoteLeft />
+              </span>
+              <h2 className="text-center w-2/3 font-semibold mt-3">
+                &#34;Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Laboriosam accusamus quasi earum molestiae corrupti doloribus
+                similique sapiente, dolore dolorem enim excepturi doloremque
+                deleniti qui voluptates quod at neque. Impedit, quam.&#34;
+              </h2>
+              <p className="mt-4 font-semibold poppins text-slate-500">
+                Narayanganj College
+              </p>
             </div>
           </SwiperSlide>
         </Swiper>

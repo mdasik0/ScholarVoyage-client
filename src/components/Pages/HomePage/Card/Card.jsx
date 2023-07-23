@@ -1,4 +1,4 @@
-import "./Card.css"
+import "./Card.css";
 const Card = () => {
   return (
     <div className="h-[420px] shadow-xl shadow-slate-300 w-full hover:scale-105 duration-500 hover:bg-slate-300 md:w-[350px] bg-slate-200">
@@ -13,12 +13,12 @@ const Card = () => {
       {/* info */}
       <div className="p-4">
         {/* college name */}
-        <h4 className="website-title font-bold text-xl">Harvard College</h4>
+        <h4 className="poppins font-bold text-xl">Harvard College</h4>
         <div className="text-slate-700 font-semibold">
-        <h4>Admission Date: 20/33/2000</h4>
-        <h4>Events: 20/33/2000</h4>
-        <h4>Research History: 20/33/2000</h4>
-        <h4>Sports: 20/33/2000</h4>
+          <h4>Admission Date: 20/33/2000</h4>
+          <h4>Events: 20/33/2000</h4>
+          <h4>Research History: 20/33/2000</h4>
+          <h4>Sports: 20/33/2000</h4>
         </div>
         <div className="main hover:text-white duration-500 w-full mt-2">
           <button className="button w-full">Details</button>

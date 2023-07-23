@@ -23,10 +23,13 @@ const Gallery = () => {
       <div className="flex my-20 justify-between items-center">
         {/* section info */}
         <div>
-          <h1 className="text-5xl font-bold website-title my-3">Find Your Dream</h1>
-          <h1 className="text-5xl font-bold website-title my-3">College and</h1>
-          <h1 className="text-5xl font-bold website-title my-3"> University.</h1>
-          <p className="my-3 w-3/4">Choose from our wide range of Colleges/Universities and Create your own Dream.</p>
+          <h1 className="text-5xl font-bold poppins my-3">Find Your Dream</h1>
+          <h1 className="text-5xl font-bold poppins my-3">College and</h1>
+          <h1 className="text-5xl font-bold poppins my-3"> University.</h1>
+          <p className="my-3 w-3/4">
+            Choose from our wide range of Colleges/Universities and Create your
+            own Dream.
+          </p>
           <button className="button px-3 mt-6">Get Started</button>
         </div>
         {/* section gallery */}
