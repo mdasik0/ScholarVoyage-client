@@ -6,6 +6,7 @@ import Admission from "../components/Pages/AdmissionPage/Admission/Admission";
 import MyCollege from "../components/Pages/MyCollegePage/MyCollege/MyCollege";
 import SignIn from "../components/Pages/AuthenticationPages/SignIn/SignIn";
 import SignUp from "../components/Pages/AuthenticationPages/SignUp/SignUp";
+import ForgotPassword from "../components/Pages/AuthenticationPages/ForgotPassword/ForgotPassword";
 
 const router = createBrowserRouter([
     {
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
         },
         {
             path: "forgotPassword",
-            element: <SignUp></SignUp>
+            element: <ForgotPassword></ForgotPassword>
         },
       ]
     },
