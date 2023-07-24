@@ -38,16 +38,29 @@ const SignUp = () => {
         const user = result.user;
         console.log(user);
 
-        updateUser(name, PhotoURL).then(() => {
-          form.reset();
-          if (user?.displayName) {
-            navigate("/");
-            Swal.fire("Good job!", `You Have created a Account!`, "success");
-            //  timeout is used to fix a issue.
-            setTimeout(() => {
-              location.reload();
-            }, 2000);
-          }
+        updateUser(name, PhotoURL)
+        .then(() => {
+            const SavedUser = {
+                name: name,
+                email: email,
+                photo: PhotoURL,
+              };
+            fetch('http://localhost:5000/userData',{
+                method: "POST",
+                headers: {
+                  "content-type": "application/json",
+                },
+                body: JSON.stringify(SavedUser),
+            })  
+            if (user?.displayName) {
+                navigate("/");
+                Swal.fire("Good job!", `You Have created a Account!`, "success");
+                //  timeout is used to fix a issue.
+                setTimeout(() => {
+                    location.reload();
+                }, 2000);
+            }
+            form.reset();
         });
       })
       .catch((error) => {
@@ -61,8 +74,23 @@ const SignUp = () => {
   const handleGoogleSignIn = () => {
     googleSignin()
       .then((result) => {
-        const user = result.user;
-        console.log(user);
+        const loggedUser = result.user;
+        const SavedUser = {
+          name: loggedUser.displayName,
+          email: loggedUser.email,
+          photo: loggedUser.photoURL,
+        };
+        fetch(
+          `http://localhost:5000/userData`,
+          {
+            method: "POST",
+            headers: {
+              "content-type": "application/json"
+            },
+            body: JSON.stringify(SavedUser),
+          }
+        );
+        Swal.fire("Welcome!", "Google Login succesful", "success");
         navigate("/");
       })
       .catch((error) => console.error(error));

@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle, FaLock, FaRegEnvelope } from "react-icons/fa";
 import { AuthContext } from "../../../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 const SignIn = () => {
   const { signInUser, googleSignin } = useContext(AuthContext);
 
@@ -15,9 +16,21 @@ const SignIn = () => {
   const handleGoogleSignIn = () => {
     googleSignin()
       .then((result) => {
-        const user = result.user;
-        console.log(user.photoURL);
-        navigate(from, { replace: true });
+        const loggedUser = result.user;
+        const SavedUser = {
+          name: loggedUser.displayName,
+          email: loggedUser.email,
+          photo: loggedUser.photoURL,
+        };
+        fetch(`http://localhost:5000/userData`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(SavedUser),
+        });
+        Swal.fire("Welcome!", "Google Login succesful", "success");
+        navigate("/");
       })
       .catch((error) => console.error(error));
   };
@@ -38,12 +51,7 @@ const SignIn = () => {
   };
   return (
     <div className="md:pb-6 md:pt-10 px-3 mx-0 md:mx-28 flex justify-center">
-      <form
-        onSubmit={handleSubmit}
-        style={{ width: "450px" }}
-        className=""
-        action=""
-      >
+      <form onSubmit={handleSubmit} style={{ width: "450px" }} className="">
         <h3 className="text-2xl font-extrabold mb-4">Sign in</h3>
 
         {/* email */}
@@ -93,11 +101,11 @@ const SignIn = () => {
           }
         </div>
         <Link
-            className="text-blue-600 text-sm underline underline-offset-2"
-            to="/forgotPassword"
-          >
-            Forgot your Password?
-          </Link>
+          className="text-blue-600 text-sm underline underline-offset-2"
+          to="/forgotPassword"
+        >
+          Forgot your Password?
+        </Link>
 
         <div>
           <input
