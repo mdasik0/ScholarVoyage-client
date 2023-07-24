@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { useContext } from "react";
@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
+  const navigate = useNavigate()
 
   const handleLogout = () => {
     logout()
@@ -15,6 +16,7 @@ const Navbar = () => {
           "You have logged out of your account successfully!",
           "success"
         );
+        navigate("/")
       })
       .catch((error) => console.error(error));
   };
@@ -33,14 +35,16 @@ const Navbar = () => {
       <li>
         <NavLink to="/MyCollege">My College</NavLink>
       </li>
-      
+
       {user ? (
         <>
           <li className="cursor-pointer" onClick={handleLogout}>
             Sign out
           </li>
           <li>
-            <button>{user.displayName}</button>
+            <Link to={'/profile'}>
+              <button >{user.displayName}</button>
+            </Link>
           </li>
         </>
       ) : (

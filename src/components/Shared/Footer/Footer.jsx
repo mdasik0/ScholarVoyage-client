@@ -2,7 +2,7 @@ import {FaFacebookSquare, FaGithubSquare, FaTwitterSquare, FaInstagramSquare} fr
 import {BsLinkedin} from 'react-icons/bs'
 const Footer = () => {
   return (
-    <div className="bg-blue-950 h-[40vh] text-white">
+    <div className="bg-blue-950 p-3 text-white">
       <div className="lg:w-[1400px] grid gap-6 md:grid-cols-3 grid-cols-1 mx-auto w-full p-10">
         {/* section 1 */}
         <div>
