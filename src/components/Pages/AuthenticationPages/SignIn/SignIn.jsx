@@ -22,7 +22,7 @@ const SignIn = () => {
           email: loggedUser.email,
           photo: loggedUser.photoURL,
         };
-        fetch(`http://localhost:5000/userData`, {
+        fetch(`https://college-admission-server-omega.vercel.app/userData`, {
           method: "POST",
           headers: {
             "content-type": "application/json",

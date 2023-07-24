@@ -5,26 +5,28 @@ import { FaEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Profile = () => {
-    const { user } = useContext(AuthContext);
-    const [data, setData] = useState([]);
+  const { user } = useContext(AuthContext);
+  const [data, setData] = useState([]);
 
-    useEffect(() => {
-        if (user?.email) {
-          fetch(`http://localhost:5000/userData/${user.email}`)
-            .then((res) => {
-              if (!res.ok) {
-                throw new Error('Network response was not ok');
-              }
-              return res.json();
-            })
-            .then((data) => setData(data))
-            .catch((error) => {
-              console.error('Error fetching data:', error);
-              // Handle the error or set data to a default value if needed.
-            });
-        }
-      }, [user?.email]);
- 
+  useEffect(() => {
+    if (user?.email) {
+      fetch(
+        `https://college-admission-server-omega.vercel.app/userData/${user.email}`
+      )
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return res.json();
+        })
+        .then((data) => setData(data))
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+          // Handle the error or set data to a default value if needed.
+        });
+    }
+  }, [user?.email]);
+
   console.log(data);
   return (
     <div className="p-20 flex flex-col items-center justify-center text-center">

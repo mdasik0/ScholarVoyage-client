@@ -10,7 +10,9 @@ const EditProfile = () => {
   //   get user data from server
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:5000/userData/${user.email}`)
+      fetch(
+        `https://college-admission-server-omega.vercel.app/userData/${user.email}`
+      )
         .then((res) => {
           if (!res.ok) {
             throw new Error("Network response was not ok");
@@ -37,41 +39,47 @@ const EditProfile = () => {
     console.log(name, email, university, address);
 
     const updatedData = { university, address };
-    fetch(`http://localhost:5000/userData/${data?._id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(updatedData),
-    })
+    fetch(
+      `https://college-admission-server-omega.vercel.app/userData/${data?._id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedData),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {
           Swal.fire("Updated!", "Your Profile has been updated", "success");
         }
         setTimeout(() => {
-            location.reload();
+          location.reload();
         }, 2000);
       });
 
     updateName(name).then(() => {
-        const updatedData = { name };
-        fetch(`http://localhost:5000/userData/${data?._id}`, {
+      const updatedData = { name };
+      fetch(
+        `https://college-admission-server-omega.vercel.app/userData/${data?._id}`,
+        {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(updatedData),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            if (data.modifiedCount) {
-              Swal.fire("Updated!", "Your Profile has been updated", "success");
-            }
-            setTimeout(() => {
-                location.reload();
-            }, 3000);
-          });
+        }
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.modifiedCount) {
+            Swal.fire("Updated!", "Your Profile has been updated", "success");
+          }
+          setTimeout(() => {
+            location.reload();
+          }, 3000);
+        });
     });
 
     console.log(data._id);
@@ -79,20 +87,23 @@ const EditProfile = () => {
     updateYourEmailAdress(email)
       .then(() => {
         const updatedData = { email };
-        fetch(`http://localhost:5000/userData/${data?._id}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(updatedData),
-        })
+        fetch(
+          `https://college-admission-server-omega.vercel.app/userData/${data?._id}`,
+          {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updatedData),
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.modifiedCount) {
               Swal.fire("Updated!", "Your Profile has been updated", "success");
             }
             setTimeout(() => {
-                location.reload();
+              location.reload();
             }, 2000);
           });
       })
@@ -106,14 +117,19 @@ const EditProfile = () => {
         }
         console.log(error.message);
         setTimeout(() => {
-            location.reload();
+          location.reload();
         }, 2000);
       });
   };
 
   return (
     <div className="p-20 flex flex-col items-center ">
-      <Title firstTitle={"Edit Profile"} secondTitle={'please change one data at a time Updating many data may cause problem'}></Title>
+      <Title
+        firstTitle={"Edit Profile"}
+        secondTitle={
+          "please change one data at a time Updating many data may cause problem"
+        }
+      ></Title>
       <div className="bg-slate-300 p-10 rounded-xl mt-10">
         <form
           onSubmit={handleUpdateProfile}

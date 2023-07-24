@@ -24,7 +24,7 @@ const Details = () => {
   console.log(data);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allColleges/${id}`)
+    fetch(`https://college-admission-server-omega.vercel.app/allColleges/${id}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);

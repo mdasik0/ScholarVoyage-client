@@ -10,6 +10,8 @@ import ForgotPassword from "../components/Pages/AuthenticationPages/ForgotPasswo
 import Details from "../components/Shared/Details/Details";
 import Profile from "../components/Pages/Profile/Profile";
 import EditProfile from "../components/Pages/Profile/EditProfile/EditProfile";
+import AdmissionForm from "../components/Pages/AdmissionPage/AdmissionForm/AdmissionForm";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -46,7 +48,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <Details></Details>,
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
       },
       {
         path: "profile",
@@ -55,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "editProfile",
         element: <EditProfile></EditProfile>,
+      },
+      {
+        path: "/AdmissionForm/:id",
+        element: <AdmissionForm></AdmissionForm>,
       },
     ],
   },
