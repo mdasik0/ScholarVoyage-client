@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import { BiSolidQuoteLeft } from "react-icons/bi";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Rating } from "@smastrom/react-rating";
-import "@smastrom/react-rating/style.css";
+    import "@smastrom/react-rating/style.css";
 
 const Review = () => {
   return (
@@ -68,7 +68,7 @@ const Review = () => {
               <div className="w-20 h-20 ">
                 <img
                   className="w-full h-full rounded-full"
-                  src="/public/profile-picture.jpg"
+                  src="/profile-picture.jpg"
                   alt=""
                 />
               </div>

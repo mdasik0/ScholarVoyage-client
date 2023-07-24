@@ -7,6 +7,7 @@ import MyCollege from "../components/Pages/MyCollegePage/MyCollege/MyCollege";
 import SignIn from "../components/Pages/AuthenticationPages/SignIn/SignIn";
 import SignUp from "../components/Pages/AuthenticationPages/SignUp/SignUp";
 import ForgotPassword from "../components/Pages/AuthenticationPages/ForgotPassword/ForgotPassword";
+import Details from "../components/Shared/Details/Details";
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
         {
             path: "forgotPassword",
             element: <ForgotPassword></ForgotPassword>
+        },
+        {
+            path: "/details/:id",
+            element: <Details></Details>,
+            
         },
       ]
     },

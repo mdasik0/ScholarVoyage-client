@@ -6,10 +6,10 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import image1 from "../../../../../public/gallery/graduate-1.jpg";
-import image2 from "../../../../../public/gallery/graduate-2.jpg";
-import image3 from "../../../../../public/gallery/graduate-3.jpg";
-import image4 from "../../../../../public/gallery/graduate-4.jpg";
+import image1 from "/gallery/graduate-1.jpg";
+import image2 from "/gallery/graduate-2.jpg";
+import image3 from "/gallery/graduate-3.jpg";
+import image4 from "/gallery/graduate-4.jpg";
 
 import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
 import Title from "../../../Shared/Title/Title";
